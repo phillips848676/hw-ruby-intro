@@ -40,12 +40,17 @@ end
 # Part 2
 
 def hello(name)
-  nm = "hello, "+name
+  nm = "Hello, "+name
   return nm
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  #//if (s.ord == 65 || s.ord == 69 || s.ord == 73 || s.ord == 79 || s.ord == 85 )
+  if ( s == 'A' || s == 'a' || s == 'E' || s == 'e' || s == 'I' || s == 'i' || s == 'O' || s == 'o' || s == 'U' || s == 'u' || s == '')
+    return false
+  end
+  return true;
+  
 end
 
 def binary_multiple_of_4? s
@@ -55,13 +60,30 @@ end
 # Part 3
 
 class BookInStock
-# YOUR CODE HERE
+  def initialize is, pr
+    @isbn = is
+    @price = pr
+  end
+  def getIsbn 
+    return @isbn
+  end
+  def setIsbn is
+    @isbn = is
+  end
+  def getPrice
+    return @price
+  end
+  def setPrice pr
+    @price = pr
+  end
 end
 
 # nums = [1,2,3,4]
 # n =  sum_to_n? nums,2
 # puts n
 
-puts hello "madeleine"
+puts starts_with_consonant? 'a'
+puts starts_with_consonant? 'e'
+puts starts_with_consonant? 'B'
 
 
