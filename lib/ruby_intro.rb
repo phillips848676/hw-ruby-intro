@@ -11,17 +11,17 @@ def sum arr
 end
 
 def max_2_sum arr
-  # if ( arr.length() != 0 ) 
-  #   sum =  arr.max
-  #   i = arr.index(sum)
-  #   arr.slice!(i)
-  #   sum = sum + arr.max
-  # elsif (arr.length() == 1 )
-  #   sum = arr[0]
-  # else 
-  #   sum = 0
-  # end
-  # return sum
+  if ( arr.length() != 0 && arr.length() != 1) 
+    sum =  arr.max
+    i = arr.index(sum)
+    arr.slice!(i)
+    sum = sum + arr.max
+  elsif (arr.length() == 1 )
+    sum = arr[0]
+  else 
+    sum = 0
+  end
+  return sum
   
 end
 
@@ -45,8 +45,8 @@ def hello(name)
 end
 
 def starts_with_consonant? s
-  #//if (s.ord == 65 || s.ord == 69 || s.ord == 73 || s.ord == 79 || s.ord == 85 )
-  if ( s == 'A' || s == 'a' || s == 'E' || s == 'e' || s == 'I' || s == 'i' || s == 'O' || s == 'o' || s == 'U' || s == 'u' || s == '')
+  t = s[0]
+  if ( (t == 'A' || t == 'a' || t == 'E' || t == 'e' || t == 'I' || t == 'i' || t == 'O' || t == 'o' || t == 'U' || t == 'u' )  && t != '')
     return false
   end
   return true;
@@ -100,13 +100,13 @@ class BookInStock
   end
 end
 
-# nums = [1,2,3,4]
-# n =  sum_to_n? nums,2
+# nums = [1]
+# n =  max_2_sum nums
 # puts n
 
-# puts starts_with_consonant? 'a'
-# puts starts_with_consonant? 'e'
-# puts starts_with_consonant? 'B'
+puts starts_with_consonant? ''
+puts starts_with_consonant? 'e'
+puts starts_with_consonant? 'B'
 
 # book= BookInStock.new("",10.00)
 # puts book.price_as_string
