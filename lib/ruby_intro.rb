@@ -45,11 +45,19 @@ def hello(name)
 end
 
 def starts_with_consonant? s
-  t = s[0]
-  if ( (t == 'A' || t == 'a' || t == 'E' || t == 'e' || t == 'I' || t == 'i' || t == 'O' || t == 'o' || t == 'U' || t == 'u' )  && t != '')
-    return false
+  if ( s.length > 0 ) 
+    t = s[0,1]
+    if ( t.ord < 65 || t.ord > 122)
+      return false
+    end
   end
-  return true;
+
+ 
+  
+  if  ( t != 'A' && t != 'a' && t != 'E' && t != 'e' && t != 'I' && t != 'i' && t != 'O' && t != 'o' && t != 'U' && t != 'u' && s.length >0) 
+    return true
+  end
+  return false;
   
 end
 
@@ -104,10 +112,10 @@ end
 # n =  max_2_sum nums
 # puts n
 
-puts starts_with_consonant? ''
-puts starts_with_consonant? 'e'
-puts starts_with_consonant? 'B'
-
+puts starts_with_consonant? 'A'
+puts starts_with_consonant? 'a'
+puts starts_with_consonant? 'z'
+puts starts_with_consonant? 'Z'
 # book= BookInStock.new("",10.00)
 # puts book.price_as_string
 
