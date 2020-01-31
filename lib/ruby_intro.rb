@@ -51,14 +51,10 @@ def starts_with_consonant? s
       return false
     end
   end
-
- 
-  
   if  ( t != 'A' && t != 'a' && t != 'E' && t != 'e' && t != 'I' && t != 'i' && t != 'O' && t != 'o' && t != 'U' && t != 'u' && s.length >0) 
     return true
   end
   return false;
-  
 end
 
 def binary_multiple_of_4? s
@@ -77,7 +73,7 @@ end
 class BookInStock
   def initialize is, pr
     if (is == "" || pr <= 0)
-      raise ArgumentError.new("not a correct ISBN")
+      raise ArgumentError.new("not a correct ISBN or price")
     end
     @isbn = is
     @price = pr
@@ -107,27 +103,3 @@ class BookInStock
     return var
   end
 end
-
-# nums = [1]
-# n =  max_2_sum nums
-# puts n
-
-puts starts_with_consonant? 'A'
-puts starts_with_consonant? 'a'
-puts starts_with_consonant? 'z'
-puts starts_with_consonant? 'Z'
-# book= BookInStock.new("",10.00)
-# puts book.price_as_string
-
-# puts binary_multiple_of_4? "1001"
-# puts binary_multiple_of_4? "1010"
-# puts binary_multiple_of_4? "1011"
-# puts binary_multiple_of_4? "1100"
-# puts binary_multiple_of_4? "1101"
-# puts binary_multiple_of_4? "1110"
-# puts binary_multiple_of_4? "1111"
-# puts binary_multiple_of_4? "10000"
-
-
-
-
